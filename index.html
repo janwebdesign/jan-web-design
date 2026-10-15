@@ -156,6 +156,46 @@ html{scroll-behavior:auto!important;scroll-padding-top:0!important}
   #home-shell main > .section-pad:not(.intro):not(.faq){padding-top:98px}
   #prywatnosc{scroll-margin-top:72px}
 }
+
+/* ===== V7: calm hero spacing, balanced intro, readable privacy and FAQ ===== */
+/* Lift opening content without reducing the full-viewport dark hero. */
+@media(min-width:901px){
+  .hero-grid{transform:translateY(-46px)}
+  .intro.section-pad{padding-top:136px;padding-bottom:126px}
+}
+@media(min-width:901px) and (max-height:780px){.hero-grid{transform:translateY(-29px)}}
+/* Restore breathing room in the first white section, especially on smaller screens. */
+@media(min-width:651px) and (max-width:900px){
+  .intro.section-pad{padding-top:115px;padding-bottom:104px}
+}
+@media(max-width:650px){
+  .intro.section-pad{padding-top:102px;padding-bottom:91px}
+}
+/* FAQ answers must explain decisions clearly, not read like placeholders. */
+.faq-list details>p{font-size:15px;line-height:1.88;color:#354735;max-width:720px;margin:1px 16px 24px 0}
+.faq-list summary{font-size:16px;line-height:1.55;padding-block:20px}
+.faq.section-pad{padding-bottom:105px}
+.faq-layout>div:first-child>p:last-child{max-width:360px}
+/* Keep the privacy accordion in the same green palette as the contact section.
+   Light type on dark surface with distinct focus states and readable opened text. */
+.privacy-section{background:#1b2a1f;color:#eff5e9;border-top:1px solid #74876b55;padding:28px 0 30px}
+.privacy-section summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:8px 0;color:#eef5e8;font-size:15px;font-weight:800;line-height:1.55}
+.privacy-section summary:hover{color:#d2fb8f}
+.privacy-section summary span{float:none;color:#c9f477;font-size:20px;flex:none}
+.privacy-section details[open] summary{padding-bottom:13px}
+.privacy-section details[open] summary span{transform:rotate(45deg)}
+.privacy-section .privacy-inner{color:#d1ddce;font-size:14px;line-height:1.8;max-width:950px;padding-bottom:8px}
+.privacy-section .privacy-inner a{color:#d3fa8b;text-underline-offset:3px}
+.privacy-section .privacy-inner strong{color:#f2f8eb}
+.privacy-section .privacy-inner p{margin:0 0 13px}
+.privacy-section .privacy-inner p:last-child{margin-bottom:0}
+@media(max-width:650px){
+  .faq-list summary{font-size:15px;padding-block:19px}
+  .faq-list details>p{font-size:14px;line-height:1.75;margin-bottom:23px}
+  .faq.section-pad{padding-bottom:85px}
+  .privacy-section summary{font-size:14px}
+  .privacy-section .privacy-inner{font-size:13px}
+}
 </style>
 <title>Jan Web Design — Nowoczesne strony internetowe</title>
 </head>
@@ -285,13 +325,13 @@ html{scroll-behavior:auto!important;scroll-padding-top:0!important}
 </div>
 </section>
 <section class="about section-pad" id="o-mnie"><div class="container about-layout"><div class="about-graphic"><div class="about-frame"><span class="about-large">JW<span>.</span></span><div class="about-frame-footer"><span>JAN WEB DESIGN</span><span>INDEPENDENT STUDIO / 2026</span></div></div><span class="about-star">✳</span></div><div class="about-content"><p class="section-kicker"><span class="kicker-line"></span> 06 / O MNIE</p><h2>Za dobrą stroną stoi <em>uwaga do detali.</em></h2><p>Nazywam się Jan Frąckiewicz i rozwijam Jan Web Design — niezależne studio tworzenia nowoczesnych stron internetowych. Stawiam na przejrzystą komunikację, indywidualne podejście i projekty, z których można być dumnym.</p><p>Nie obiecuję cudów ani gotowych wyników sprzedaży. Zależy mi na stronie, która profesjonalnie prezentuje Twoją firmę i działa tak, jak powinna.</p><a class="text-link dark-link" href="#kontakt">Porozmawiajmy o Twoim projekcie <span aria-hidden="true">↗</span></a></div></div></section>
-<section class="faq section-pad" id="faq"><div class="container faq-layout"><div><p class="section-kicker"><span class="kicker-line"></span> 07 / PYTANIA</p><h2>Warto wiedzieć.</h2><p>Najczęstsze pytania przed rozpoczęciem współpracy.</p></div><div class="faq-list"><details><summary>Ile kosztuje stworzenie strony? <span aria-hidden="true">+</span></summary><p>Landing page: proponowane od 2 500 zł; strona firmowa: od 4 500 zł; rozwiązania indywidualne: od 6 500 zł. Końcowa wycena zależy od funkcji, liczby podstron i materiałów. Przed rozpoczęciem otrzymasz pisemny zakres, cenę i warunki.</p></details><details><summary>Jaka jest różnica między landing page a stroną firmową? <span aria-hidden="true">+</span></summary><p>Landing page to jedna długa strona zachęcająca do konkretnego działania (np. zostawienia numeru kontaktowego). Strona firmowa to zwykle kilka osobnych podstron: strona główna, usługi, galeria realizacji, o firmie i kontakt. Projekt indywidualny dodaje niestandardowe funkcje, np. katalog z filtrami czy rozbudowane formularze.</p></details><details><summary>Jak długo trwa realizacja? <span aria-hidden="true">+</span></summary><p>Termin ustalamy po określeniu zakresu projektu i dostępności materiałów. W propozycji otrzymasz plan etapów i realistyczny harmonogram.</p></details><details><summary>Czy strona będzie działała na telefonie? <span aria-hidden="true">+</span></summary><p>Tak. Projektuję układy responsywne i sprawdzam ich wygląd na małych oraz dużych ekranach.</p></details><details><summary>Czy projekty w portfolio to prace dla klientów? <span aria-hidden="true">+</span></summary><p>Pokazane obecnie projekty Aurel i Forma są autorskimi koncepcjami demonstracyjnymi. Są interaktywnymi demonstracjami wykonanymi dla fikcyjnych marek — nie są zleceniami ani opiniami prawdziwych klientów.</p></details><details><summary>Czy pomożesz z domeną i publikacją? <span aria-hidden="true">+</span></summary><p>Mogę pomóc przygotować stronę do uruchomienia i wyjaśnić potrzebne kroki. Domena powinna należeć do klienta. Hosting i ewentualna opieka po wdrożeniu są uzgadniane osobno.</p></details><details><summary>Jak wygląda płatność i kiedy zaczynamy? <span aria-hidden="true">+</span></summary><p>Najpierw ustalamy szczegółowy zakres, harmonogram i warunki współpracy. Ewentualny podział płatności na etapy określa właściwa umowa. Nie pobieram płatności przez tę stronę, a wysłanie formularza nie tworzy zobowiązania do zakupu.</p></details></div></div></section>
+<section class="faq section-pad" id="faq"><div class="container faq-layout"><div><p class="section-kicker"><span class="kicker-line"></span> 07 / PYTANIA</p><h2>Warto wiedzieć.</h2><p>Najczęstsze pytania przed rozpoczęciem współpracy.</p></div><div class="faq-list"><details><summary>Ile kosztuje stworzenie strony? <span aria-hidden="true">+</span></summary><p>Landing page zaczyna się od 2 500 zł, strona firmowa od 4 500 zł, a projekt indywidualny od 6 500 zł. Są to ceny orientacyjne, a nie automatyczna wycena. Ostateczna kwota zależy między innymi od liczby podstron, przygotowania treści, galerii, formularzy i dodatkowych funkcji. Przed rozpoczęciem prac otrzymasz propozycję z dokładnym zakresem, liczbą poprawek, terminem i ceną. Domena, hosting oraz płatne usługi zewnętrzne są wyceniane osobno, jeśli nie ustalimy inaczej.</p></details><details><summary>Jaka jest różnica między landing page a stroną firmową? <span aria-hidden="true">+</span></summary><p>Landing page to jedna przewijana strona, która prowadzi odwiedzającego do jednego celu — na przykład kontaktu, rezerwacji rozmowy lub zapytania o usługę. Dobrze sprawdza się przy prostej ofercie albo kampanii. Strona firmowa ma kilka osobnych podstron, np. Start, Usługi, Realizacje, O nas i Kontakt. Dzięki temu nadaje się do firmy z większą ofertą. Projekt indywidualny to rozwiązanie z dodatkowymi funkcjami, np. katalogiem produktów, filtrami lub rozbudowanym formularzem. Dobór pakietu zależy od tego, co Twoja firma naprawdę chce osiągnąć.</p></details><details><summary>Jak długo trwa realizacja? <span aria-hidden="true">+</span></summary><p>Prosty landing page z gotowymi tekstami, zdjęciami i uzgodnionym wyglądem może być przygotowany w około 3–5 dni roboczych od otrzymania kompletu materiałów i zaakceptowania zakresu. To orientacyjny czas dla niewielkiego projektu, nie gwarancja dla każdej strony. Witryny firmowe z wieloma podstronami oraz projekty z dodatkowymi funkcjami wymagają zwykle więcej czasu. Przed startem ustalimy realistyczny harmonogram, terminy na Twoje uwagi i datę przekazania strony — wszystko na piśmie.</p></details><details><summary>Co trzeba przygotować przed rozpoczęciem projektu? <span aria-hidden="true">+</span></summary><p>Na początek wystarczy krótki opis działalności, informacje o usługach, które chcesz pokazać, oraz kilka przykładów stron, które Ci się podobają. Logo, zdjęcia, gotowe teksty i materiały do realizacji pomagają przyspieszyć pracę, ale jeśli jeszcze ich nie masz, wspólnie ustalimy, czego brakuje. Przed ustaleniem terminu określimy też, kto dostarcza treści i kto zatwierdza kolejne etapy.</p></details><details><summary>Czy strona będzie działała na telefonie? <span aria-hidden="true">+</span></summary><p>Tak. Strona będzie zaprojektowana tak, aby jej treść i nawigacja dostosowywały się do telefonu, tabletu i komputera. Sprawdzę między innymi wielkość tekstu, działanie przycisków i formularzy, układ zdjęć oraz wygodę przewijania. Warto pamiętać, że responsywność nie oznacza identycznego układu na każdym ekranie — na telefonie niektóre elementy celowo układają się jeden pod drugim, żeby były łatwiejsze w obsłudze.</p></details><details><summary>Czy projekty w portfolio to prace dla klientów? <span aria-hidden="true">+</span></summary><p>Nie. Obecne przykłady Aurel i Forma zostały przygotowane jako interaktywne projekty koncepcyjne dla fikcyjnych marek. Pokazują styl, nawigację i wybrane funkcje, które mogę zbudować, ale nie są stronami zamówionymi ani opłaconymi przez rzeczywistych klientów. Kiedy będę mógł pokazywać ukończone projekty komercyjne za zgodą klientów, wyraźnie oznaczę je osobno.</p></details><details><summary>Czy pomożesz z domeną i publikacją? <span aria-hidden="true">+</span></summary><p>Tak, mogę pomóc wybrać sposób publikacji, skonfigurować domenę i uruchomić stronę po jej zatwierdzeniu. Najbezpieczniej, gdy domena oraz konta potrzebne do utrzymania strony są zarejestrowane na Ciebie lub Twoją firmę — dzięki temu zachowujesz do nich dostęp. Opłaty za odnowienie domeny, hosting i ewentualne usługi dodatkowe są zwykle oddzielne od kosztu wykonania strony. Wszystkie wymagane dostępy i sposób przekazania ustalimy przed publikacją.</p></details><details><summary>Jak wygląda płatność i kiedy zaczynamy? <span aria-hidden="true">+</span></summary><p>Najpierw rozmawiamy o potrzebach, zakresie i materiałach. Następnie otrzymasz pisemną propozycję zawierającą cenę, plan prac, zasady zgłaszania poprawek oraz termin realizacji. Rozpoczęcie prac i ewentualny podział płatności na etapy nastąpią dopiero po uzgodnieniu odpowiedniej umowy i sposobu rozliczenia. Przez sam formularz nie pobieram pieniędzy, a wysłanie zapytania do niczego Cię nie zobowiązuje.</p></details></div></div></section>
 <section class="contact section-pad" id="kontakt">
 <div class="container contact-v2">
 <div class="contact-v2-copy">
 <p class="section-kicker light-kicker"><span class="kicker-line"></span> 08 / KONTAKT</p>
 <h2>Opowiedz mi o<br/><em>swoim projekcie.</em></h2>
-<p>Opisz swój pomysł i wyślij zapytanie bez konieczności otwierania poczty. Formularz wymaga jednorazowej aktywacji po stronie studia; e-mail kontaktowy pozostaje zawsze dostępny.</p>
+<p>Opisz swój pomysł i wyślij zapytanie bez konieczności otwierania poczty. Jeśli wolisz, możesz też napisać bezpośrednio na e-mail — odpowiem na Twoje pytania i pomogę ustalić odpowiedni zakres.</p>
 <div class="contact-v2-assurance"><span>↗</span> Bez zobowiązania do zakupu</div>
 <div class="contact-v2-assurance"><span>↗</span> Konkretny zakres i warunki przed rozpoczęciem</div>
 <div class="contact-direct-v2"><small>Wolisz zwykły e-mail?</small><a href="mailto:jan.webdesign.contact@gmail.com">jan.webdesign.contact@gmail.com</a></div>
@@ -316,7 +356,7 @@ html{scroll-behavior:auto!important;scroll-padding-top:0!important}
 <label>Co ma robić Twoja strona? <span>*</span><textarea maxlength="1600" name="message" placeholder="Opisz krótko swoją firmę, potrzebne sekcje i cel strony..." required="" rows="4"></textarea></label>
 <label class="privacy-agreement"><input name="consent" required="" type="checkbox" value="Tak"/><span>Zapoznałem/am się z <a href="#prywatnosc">informacją o prywatności</a> i rozumiem, że moje dane zostaną przekazane operatorowi formularza w celu obsługi zapytania. <b>*</b></span></label>
 <button class="enquiry-submit" id="enquiry-submit" type="submit">Wyślij zapytanie <span aria-hidden="true">↗</span></button>
-<p class="enquiry-disclaimer">Formularz działa przez usługę FormSubmit. Po wysłaniu zobaczysz potwierdzenie zgłoszenia; w razie problemu możesz skorzystać z alternatywnego formularza lub napisać e-mail. Wysłanie zapytania nie oznacza zamówienia.</p>
+<p class="enquiry-disclaimer">Formularz działa przez usługę FormSubmit. Po prawidłowej wysyłce zobaczysz potwierdzenie zgłoszenia; jeśli wystąpi problem, możesz użyć alternatywnej metody lub napisać e-mail. Wysłanie zapytania nie oznacza zamówienia.</p>
 <div aria-live="polite" class="enquiry-ready" hidden="" id="enquiry-ready" role="status">
 <strong id="enquiry-title">Sprawdzanie zgłoszenia…</strong>
 <p class="enquiry-feedback" id="enquiry-feedback"></p>
