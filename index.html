@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 
 <html lang="pl">
 <head>
@@ -10,7 +9,15 @@
 <meta content="Jan Web Design — nowoczesne, dopracowane strony internetowe dla firm. Indywidualny projekt, świetny wygląd na telefonie i wygodny kontakt z klientami." name="description"/>
 <meta content="Jan Web Design — strony, które robią wrażenie" property="og:title"/>
 <meta content="Tworzę nowoczesne strony internetowe, które pokazują to, co najlepsze w Twojej firmie." property="og:description"/>
-<meta content="website" property="og:type"/>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://janwebdesign.github.io/">
+<meta property="og:site_name" content="Jan Web Design">
+<meta property="og:locale" content="pl_PL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jan Web Design — strony, które robią wrażenie">
+<meta name="twitter:description" content="Tworzę nowoczesne strony internetowe, które pokazują to, co najlepsze w Twojej firmie.">
+<link rel="canonical" href="https://janwebdesign.github.io/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Jan Web Design","url":"https://janwebdesign.github.io/","inLanguage":["pl-PL","en","de","uk"]}</script>
 <link href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA4MCI+PHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiByeD0iMTgiIGZpbGw9IiMxMzE3MTMiLz48cGF0aCBkPSJNMTQgMjRoMTd2MjZjMCA3LTQgMTEtMTIgMTFoLTVWNDloNFYyNFptMjAgMGgxM2w1IDI0IDUtMjRoMTFsLTEwIDM3SDQ2TDM0IDI0WiIgZmlsbD0iI2Y0ZjZlZSIvPjxjaXJjbGUgY3g9IjY5IiBjeT0iNTgiIHI9IjYiIGZpbGw9IiNjOWY0NzciLz48L3N2Zz4K" rel="icon" type="image/svg+xml"/>
 <style>
 :root{--ink:#111611;--deep:#0d120e;--deep2:#171e19;--paper:#f6f7f0;--white:#fbfcf8;--muted:#777e75;--line:#dce1d5;--lime:#c9f477;--lime2:#aee466;--head:system-ui,-apple-system,'Segoe UI',sans-serif;--body:system-ui,-apple-system,'Segoe UI',sans-serif}
@@ -438,7 +445,7 @@ a, button, summary, select, [role="button"] { touch-action:manipulation; }
 <h3>Zacznijmy od kilku szczegółów.</h3>
 <div class="enquiry-grid">
 <label>Imię <span>*</span><input autocomplete="given-name" maxlength="80" name="name" placeholder="Jak się nazywasz?" required=""/></label>
-<label>E-mail <span>*</span><input autocomplete="email" maxlength="160" name="email" placeholder="kontakt@twojafirma.pl" required="" type="email"/></label>
+<label>E-mail <span>*</span><input autocomplete="email" autocapitalize="none" spellcheck="false" inputmode="email" maxlength="160" name="email" placeholder="kontakt@twojafirma.pl" required="" type="email"/></label>
 </div>
 <label>Firma lub branża <input autocomplete="organization" maxlength="120" name="company" placeholder="Np. firma budowlana"/></label>
 <div class="enquiry-grid">
@@ -529,6 +536,9 @@ a, button, summary, select, [role="button"] { touch-action:manipulation; }
   const descriptionMeta=document.querySelector('meta[name="description"]');
   const ogTitle=document.querySelector('meta[property="og:title"]');
   const ogDescription=document.querySelector('meta[property="og:description"]');
+  const ogLocale=document.querySelector('meta[property="og:locale"]');
+  const twitterTitle=document.querySelector('meta[name="twitter:title"]');
+  const twitterDescription=document.querySelector('meta[name="twitter:description"]');
   let current='pl';
   const translate=(phrase)=>{
     if(typeof phrase!=='string')return phrase;
@@ -540,6 +550,9 @@ a, button, summary, select, [role="button"] { touch-action:manipulation; }
     if(descriptionMeta)descriptionMeta.content=meta.description;
     if(ogTitle)ogTitle.content=meta.home;
     if(ogDescription)ogDescription.content=meta.description;
+    if(ogLocale)ogLocale.content=({pl:'pl_PL',en:'en_GB',de:'de_DE',uk:'uk_UA'})[current];
+    if(twitterTitle)twitterTitle.content=meta.home;
+    if(twitterDescription)twitterDescription.content=meta.description;
   }
   function setLanguage(next,save=true){
     if(!locales.includes(next))next='pl';
@@ -573,7 +586,7 @@ a, button, summary, select, [role="button"] { touch-action:manipulation; }
   const trigger=document.querySelector('.lang-trigger');const popup=document.getElementById('language-popup');
   trigger?.addEventListener('click',e=>{e.stopPropagation();popup.hidden=!popup.hidden;trigger.setAttribute('aria-expanded',String(!popup.hidden));});
   document.addEventListener('click',e=>{if(!e.target.closest('.language-desktop')&&popup){popup.hidden=true;trigger?.setAttribute('aria-expanded','false');}});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&popup){popup.hidden=true;trigger?.setAttribute('aria-expanded','false');}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&popup&&!popup.hidden){popup.hidden=true;trigger?.setAttribute('aria-expanded','false');trigger?.focus({preventScroll:true});}});
   window.JWD={t:translate,setLanguage,get language(){return current;},titleForView};
   let stored='pl';try{stored=localStorage.getItem('jwd-language')||'pl';}catch(_){}
   setLanguage(stored,false);
@@ -587,7 +600,7 @@ a, button, summary, select, [role="button"] { touch-action:manipulation; }
     backdrop.type='button';
     backdrop.className='mobile-nav-backdrop';
     backdrop.hidden=true;
-    backdrop.setAttribute('aria-label','Close navigation');
+    backdrop.setAttribute('aria-hidden','true');
     backdrop.setAttribute('tabindex','-1');
     document.body.append(backdrop);
     const close=()=>{
@@ -605,7 +618,7 @@ a, button, summary, select, [role="button"] { touch-action:manipulation; }
     toggle.addEventListener('click',()=>setOpen(toggle.getAttribute('aria-expanded')!=='true'));
     backdrop.addEventListener('click',close);
     nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape' && toggle.getAttribute('aria-expanded')==='true'){close();toggle.focus({preventScroll:true});}});
     document.addEventListener('jwd:languagechange',close);
     window.addEventListener('resize',()=>{if(window.innerWidth>900 && toggle.getAttribute('aria-expanded')==='true')close();});
   }
@@ -646,6 +659,7 @@ a, button, summary, select, [role="button"] { touch-action:manipulation; }
         window.scrollTo({top:0,behavior:'instant'});
         return;
       }
+      if(hash==='prywatnosc')document.querySelector('#prywatnosc details')?.setAttribute('open','');
       const target=document.getElementById(hash);
       if(!target || target.closest('[hidden]'))return;
       // Landing right at the section's beginning keeps the outgoing white
@@ -736,12 +750,16 @@ a, button, summary, select, [role="button"] { touch-action:manipulation; }
   const openMail=document.getElementById('enquiry-open');
   let prepared='';
   const nativeButton=document.getElementById('enquiry-native');
+  const copyButton=document.getElementById('enquiry-copy');
   function setContactMessage(heading,message,kind='failure'){
     title.textContent=t(heading);feedback.textContent=t(message);
     status.classList.remove('state-pending','state-failure','state-success');status.classList.add('state-'+kind);
     nativeButton.hidden=kind==='success';
+    // After successful submission, offering another send risks duplicate enquiries.
+    openMail.hidden=kind==='success';
+    copyButton.hidden=kind==='success';
     status.hidden=false;
-    status.scrollIntoView({behavior:'smooth',block:'nearest'});
+    status.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'nearest'});
   }
   // Explicit user-triggered fallback: ordinary HTML POST, not a second automatic attempt.
   // Navigates to FormSubmit where the visitor can see its own confirmation/activation screen.
