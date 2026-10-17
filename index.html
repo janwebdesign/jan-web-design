@@ -1025,6 +1025,147 @@ a, button, summary, select, [role="button"] { touch-action:manipulation; }
 #demo-hotel>.concept-topbar .back-link{display:inline-flex;align-items:center;gap:9px;text-decoration:none}
 #demo-hotel>.concept-topbar .back-link svg{width:15px;height:15px;flex:0 0 15px}
 @media(max-width:430px){#demo-hotel>.concept-topbar{padding:0 17px;height:62px;gap:12px}#demo-hotel>.concept-topbar .back-link{font-size:10px;letter-spacing:.03em}#demo-hotel>.concept-topbar .concept-badge{font-size:8px;padding:8px 9px;letter-spacing:.06em}}
+
+/* Aurel safari booking/select polish */
+#demo-hotel .v11-hotel-booking,
+#demo-hotel .v11-hotel-planner-box form{overflow:hidden}
+#demo-hotel .v11-hotel-booking>label{justify-content:center;min-height:72px;box-sizing:border-box}
+#demo-hotel .v11-hotel-booking>label>span,
+#demo-hotel .v11-hotel-planner-box label>span{display:block;line-height:1.2}
+#demo-hotel .v11-hotel-booking input,
+#demo-hotel .v11-hotel-booking select,
+#demo-hotel .v11-hotel-planner-box input,
+#demo-hotel .v11-hotel-planner-box select{box-sizing:border-box;max-width:100%;width:100%;border-radius:0;line-height:1.25}
+#demo-hotel .v11-hotel-booking input[type="date"],
+#demo-hotel .v11-hotel-planner-box input[type="date"]{-webkit-appearance:none;appearance:none;min-height:28px}
+#demo-hotel .v11-hotel-booking select,
+#demo-hotel .v11-hotel-planner-box select{-webkit-appearance:none;appearance:none;cursor:pointer;padding-right:34px!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2356695c' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:14px 14px;background-position:right 2px center}
+#demo-hotel .v11-hotel-booking select{background-color:transparent}
+#demo-hotel .v11-hotel-planner-box select{background-color:#fff;background-position:right 12px center;padding-right:40px!important}
+#demo-hotel .v11-hotel-booking button::after,
+#demo-hotel .v11-hotel-planner-box button::after{width:14px;height:14px;flex-basis:14px}
+#demo-hotel .v11-hotel-booking button{min-height:60px}
+#demo-hotel .v11-hotel-planner-box button{min-height:54px}
+@media(max-width:760px){
+ #demo-hotel .v11-hotel-booking{align-items:stretch}
+ #demo-hotel .v11-hotel-booking>label{min-height:78px}
+ #demo-hotel .v11-hotel-booking input,
+ #demo-hotel .v11-hotel-booking select{font-size:14px;line-height:1.25}
+}
+@media(max-width:430px){
+ #demo-hotel .v11-hotel-booking{grid-template-columns:1fr;padding:15px 15px 17px;gap:9px}
+ #demo-hotel .v11-hotel-booking>label,
+ #demo-hotel .v11-hotel-booking>label:nth-of-type(3),
+ #demo-hotel .v11-hotel-booking button{grid-column:auto}
+ #demo-hotel .v11-hotel-booking>label{min-height:74px;padding:12px 12px 11px;font-size:10px}
+ #demo-hotel .v11-hotel-booking input,
+ #demo-hotel .v11-hotel-booking select{font-size:14px}
+ #demo-hotel .v11-hotel-booking button{min-height:52px;font-size:12px;padding:0 16px}
+ #demo-hotel .v11-hotel-planner-box label>span{font-size:11px}
+ #demo-hotel .v11-hotel-planner-box input,
+ #demo-hotel .v11-hotel-planner-box select{font-size:14px;padding:12px 12px;min-height:52px}
+}
+
+
+/* === AUREL FINAL PRESENTATION PASS · 17 OCT 2026 === */
+/* Fine typography and proportion fixes, all scoped to the boutique-hotel concept. */
+#demo-hotel .v11-hotel{--aurel-field:#f9f8f4;--aurel-field-stroke:#d8ddd3}
+#demo-hotel .v11-hotel-nav{border-bottom:1px solid #263e2c12}
+#demo-hotel .v11-hotel-nav-cta{min-width:174px;min-height:48px;justify-content:space-between;padding-inline:18px;white-space:nowrap}
+#demo-hotel .v11-hotel-hero{min-height:610px}
+#demo-hotel .v11-hotel-hero-content{width:100%;max-width:940px;padding-bottom:112px}
+#demo-hotel .v11-hotel-hero h1{max-width:790px;line-height:1.035;letter-spacing:-.038em}
+#demo-hotel .v11-hotel-hero-desc{max-width:540px;font-size:15px;line-height:1.85;color:#f8f5ed}
+#demo-hotel .v11-hotel-hero-actions{gap:12px;align-items:stretch}
+#demo-hotel .v11-hotel-btn,#demo-hotel .v11-hotel-ghost{min-width:215px;min-height:56px;padding:0 20px;justify-content:space-between;gap:22px;font-size:12px;text-decoration:none}
+#demo-hotel .v11-hotel-hero-actions a::after{height:16px;width:16px;flex-basis:16px}
+#demo-hotel .v11-hotel-hero-foot{bottom:21px;line-height:1.5}
+/* The desktop date, guest and CTA controls now sit on the same baseline. */
+#demo-hotel .v11-hotel-booking{max-width:1320px;margin:-9px auto 0;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.8fr) minmax(215px,1.15fr);min-height:108px;padding:15px 25px;background:var(--aurel-field);border:1px solid #e1e4dc;box-shadow:0 18px 55px #14291c1c;column-gap:0}
+#demo-hotel .v11-hotel-booking>label{min-height:74px;height:74px;margin:0 19px 0 0;padding:11px 19px 11px 0;align-items:stretch;justify-content:center;gap:8px;border-right:1px solid var(--aurel-field-stroke);font-size:11px;font-weight:700;line-height:1.3;letter-spacing:.02em;color:#536858;cursor:pointer}
+#demo-hotel .v11-hotel-booking>label:nth-of-type(3){margin-right:20px}
+#demo-hotel .v11-hotel-booking>label>span{font-size:11px;line-height:1.3;font-weight:700}
+#demo-hotel .v11-hotel-booking input,#demo-hotel .v11-hotel-booking select{box-sizing:border-box;display:block;width:100%;height:32px;min-height:32px;max-height:32px;max-width:100%;padding:0;line-height:32px;border:0;border-radius:0;background-color:transparent;color:#273f31;font-size:15px;font-weight:650;box-shadow:none;outline-offset:3px}
+#demo-hotel .v11-hotel-booking select{padding-right:25px!important;background-position:right 3px center;background-size:14px 14px}
+#demo-hotel .v11-hotel-booking input[type=date]{-webkit-appearance:none;appearance:none;color-scheme:light}
+#demo-hotel .v11-hotel-booking input[type=date]::-webkit-calendar-picker-indicator{opacity:.76;cursor:pointer;width:16px;height:16px;margin:0 0 0 5px}
+#demo-hotel .v11-hotel-booking button{align-self:center;width:100%;height:65px;min-height:65px;padding:0 23px;justify-content:space-between;font-size:12px;font-weight:700;line-height:1.4;letter-spacing:.01em;box-shadow:none}
+#demo-hotel .v11-hotel-booking button:hover{background:#355842}
+#demo-hotel .v11-hotel-trust{padding-top:34px;padding-bottom:31px}
+#demo-hotel .v11-hotel-trust>div{line-height:1.5}
+/* Last section: more deliberate editorial spacing, no unnecessary effects. */
+#demo-hotel .v11-hotel-final{position:relative;isolation:isolate;padding:108px 25px 112px;border-top:1px solid #dce0d5;background:#efece3}
+#demo-hotel .v11-hotel-final>p:first-child{color:#9a835f;letter-spacing:2.3px;font-size:10px;font-weight:800;line-height:1.5}
+#demo-hotel .v11-hotel-final>p:first-child::after{content:'';display:block;width:42px;height:1px;margin:19px auto 0;background:#b9aa8c}
+#demo-hotel .v11-hotel-final h2{max-width:870px;margin:26px auto 22px;line-height:1.11;letter-spacing:-.039em;font-size:clamp(43px,4.6vw,70px);text-wrap:balance}
+#demo-hotel .v11-hotel-final>p:not(:first-child){max-width:585px;margin:0 auto;color:#5d705f;font-size:15px;line-height:1.85}
+#demo-hotel .v11-hotel-final>a{margin-top:31px;min-height:56px;padding:0 25px;gap:25px;justify-content:space-between;font-size:12px}
+#demo-hotel .v11-hotel-final>a::after{width:16px;height:16px;flex-basis:16px}
+/* Matching secondary booking controls, including iOS native form widgets. */
+#demo-hotel .v11-hotel-planner-box{border:1px solid #e6e9e1}
+#demo-hotel .v11-hotel-planner-box input,#demo-hotel .v11-hotel-planner-box select{box-sizing:border-box;width:100%;max-width:100%;min-width:0;height:52px;min-height:52px;max-height:52px;border:1px solid #d4dcd3;border-radius:2px;background-color:#fff;padding:0 14px;line-height:1.4;font-size:14px;font-weight:500;box-shadow:none}
+#demo-hotel .v11-hotel-planner-box select{padding-right:40px!important;background-position:right 13px center;background-size:14px 14px}
+#demo-hotel .v11-hotel-planner-box input[type=date]{-webkit-appearance:none;appearance:none;color-scheme:light}
+#demo-hotel .v11-hotel-planner-box input[type=date]::-webkit-calendar-picker-indicator{opacity:.72;cursor:pointer;min-width:14px}
+#demo-hotel .v11-hotel-planner-box label{gap:9px}
+#demo-hotel .v11-hotel-planner-box button{margin-top:5px;min-height:55px;font-size:12px}
+#demo-hotel .v11-hotel-booking :is(input,select):focus-visible,#demo-hotel .v11-hotel-planner-box :is(input,select):focus-visible{outline:2px solid #a58a5d;outline-offset:3px}
+@media(min-width:981px){
+ #demo-hotel .v11-hotel-booking>label:nth-of-type(3){border-right:1px solid var(--aurel-field-stroke)}
+}
+/* Tablet: dates in the first row and a clean booking action beneath. */
+@media(max-width:980px){
+ #demo-hotel .v11-hotel-booking{max-width:calc(100% - 36px);margin:-8px auto 0;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:15px}
+ #demo-hotel .v11-hotel-booking>label,#demo-hotel .v11-hotel-booking>label:nth-of-type(3){border:1px solid var(--aurel-field-stroke);height:72px;min-height:72px;margin:0;padding:10px 15px;gap:7px}
+ #demo-hotel .v11-hotel-booking button{height:72px;min-height:72px;grid-column:auto}
+ #demo-hotel .v11-hotel-hero-content{padding-bottom:108px}
+}
+@media(max-width:760px){
+ #demo-hotel .v11-hotel-hero{min-height:650px}
+ #demo-hotel .v11-hotel-hero-grad{background:linear-gradient(90deg,#14261dd4 0%,#1a2b22a0 53%,#1b292447 100%),linear-gradient(0deg,#102019ce 0%,transparent 70%)}
+ #demo-hotel .v11-hotel-hero-content{padding:118px 24px 110px;max-width:650px}
+ #demo-hotel .v11-hotel-hero h1{font-size:clamp(48px,7.8vw,67px);line-height:1.045;letter-spacing:-.038em;margin-bottom:22px}
+ #demo-hotel .v11-hotel-hero-desc{font-size:14px;line-height:1.8;max-width:490px;margin-bottom:27px}
+ #demo-hotel .v11-hotel-btn,#demo-hotel .v11-hotel-ghost{min-width:195px;min-height:54px}
+ #demo-hotel .v11-hotel-booking>label:nth-of-type(3),#demo-hotel .v11-hotel-booking button{grid-column:1/-1}
+ #demo-hotel .v11-hotel-booking button{height:56px;min-height:56px}
+ #demo-hotel .v11-hotel-final{padding:87px 24px 92px}
+ #demo-hotel .v11-hotel-final h2{font-size:clamp(43px,7.8vw,60px)}
+}
+@media(max-width:430px){
+ #demo-hotel .v11-hotel-hero{min-height:650px}
+ #demo-hotel .v11-hotel-hero-content{padding:113px 23px 112px}
+ #demo-hotel .v11-hotel-overline{letter-spacing:1.4px;font-size:9px;line-height:1.5}
+ #demo-hotel .v11-hotel-hero h1{font-size:clamp(45px,11.9vw,55px);line-height:1.065;margin-top:24px;margin-bottom:23px}
+ #demo-hotel .v11-hotel-hero-desc{font-size:13.5px;line-height:1.8;margin-bottom:27px}
+ #demo-hotel .v11-hotel-hero-actions{gap:10px;width:100%}
+ #demo-hotel .v11-hotel-btn,#demo-hotel .v11-hotel-ghost{min-width:0;width:100%;min-height:53px;padding-inline:18px;font-size:12px}
+ #demo-hotel .v11-hotel-hero-foot{left:23px;right:23px;bottom:18px;font-size:8px;letter-spacing:1.2px}
+ #demo-hotel .v11-hotel-booking{width:calc(100% - 24px);max-width:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:-1px auto 0;padding:14px 13px 15px;background:#faf9f5;box-shadow:0 12px 28px #142b1c13}
+ #demo-hotel .v11-hotel-booking>label{height:76px;min-height:76px;padding:11px 10px;gap:7px}
+ #demo-hotel .v11-hotel-booking>label:nth-of-type(3){grid-column:1/-1;height:68px;min-height:68px}
+ #demo-hotel .v11-hotel-booking>label>span{font-size:10px}
+ #demo-hotel .v11-hotel-booking input,#demo-hotel .v11-hotel-booking select{font-size:13px;line-height:28px;min-height:29px;max-height:29px;height:29px}
+ #demo-hotel .v11-hotel-booking input[type=date]::-webkit-calendar-picker-indicator{width:14px;height:14px;margin-left:1px}
+ #demo-hotel .v11-hotel-booking button{grid-column:1/-1;min-height:54px;height:54px;font-size:12px;padding:0 16px}
+ #demo-hotel .v11-hotel-trust{margin-top:0;padding-top:23px}
+ #demo-hotel .v11-hotel-planner-box{padding:26px 18px}
+ #demo-hotel .v11-hotel-planner-box h3{font-size:29px;margin-bottom:25px}
+ #demo-hotel .v11-hotel-planner-box input,#demo-hotel .v11-hotel-planner-box select{font-size:13px;padding-inline:10px;min-height:50px;height:50px;max-height:50px}
+ #demo-hotel .v11-hotel-planner-box select{padding-right:34px!important;background-position:right 9px center}
+ #demo-hotel .v11-hotel-final{padding:80px 23px 88px}
+ #demo-hotel .v11-hotel-final h2{font-size:clamp(40px,10.3vw,48px);margin:23px auto 19px;line-height:1.12}
+ #demo-hotel .v11-hotel-final>p:not(:first-child){font-size:13.5px;line-height:1.8}
+ #demo-hotel .v11-hotel-final>a{display:flex;max-width:330px;width:100%;margin:29px auto 0;padding:0 17px;min-height:54px;font-size:12px;gap:12px}
+}
+@media(max-width:350px){
+ #demo-hotel .v11-hotel-booking{grid-template-columns:1fr}
+ #demo-hotel .v11-hotel-booking>label{grid-column:1/-1;height:65px;min-height:65px}
+ #demo-hotel .v11-hotel-booking input,#demo-hotel .v11-hotel-booking select{font-size:14px}
+ #demo-hotel .v11-hotel-hero h1{font-size:41px}
+}
+@media(prefers-reduced-motion:reduce){#demo-hotel .v11-hotel-btn,#demo-hotel .v11-hotel-ghost,#demo-hotel .v11-hotel-booking button,#demo-hotel .v11-hotel-final a{transition:none!important;transform:none!important}}
+
 </style></head>
 <body class="home">
 <div id="home-shell">
